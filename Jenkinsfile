@@ -3,7 +3,7 @@ pipeline {
       stages {
             stage('tidy') {
                   steps {
-                     tidy -q -e *.html
+                     sh tidy -q -e *.html
                   }
             }
            stage('Upload to AWS') {
